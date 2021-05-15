@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: lightgrey;
+}
+
+/* HEADER */
+.title{
+    display: flex;
+    background-color: white;
+    text-align: left;
+    color: #29B1DD;
+    height: 50px;
+    align-items: flex-end;
+    padding-left: 20px;
+}
+
+.blue{
+    display: flex;
+    background-color:#29B1DD;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    text-transform: uppercase;
+}
