@@ -1,5 +1,3 @@
-alert("Svariate cose non vanno");
-
 /*
 Milestone 1:
 Partendo dalla seguente struttura dati, mostriamo in pagina tutte le icone disponibili come da layout.
@@ -105,15 +103,8 @@ const icons = [
 ];
 
 
-icons.forEach((icon) => {
-	document.getElementById("container").insertAdjacentHTML("beforeend",
-	`
-	<div class="icon">
-		<i class="${icon.family}"></i>
-		<p>${icon.name}</p>
-	</div>
-	`);
-});
+
+
 
 
 
@@ -134,6 +125,18 @@ const colorsArray = icons.map((element) => {
     return element;
 });
 console.log(colorsArray);
+
+colorsArray.forEach((icon) => {
+
+	const {family, prefix, name, color} = icon
+	document.getElementById("container").insertAdjacentHTML("beforeend",
+	`
+	<div class="icon">
+		<i class="${family} ${prefix}${name}" style="color:${color}"></i>
+		<p>${name}</p>
+	</div>
+	`);
+});
 
 
 
